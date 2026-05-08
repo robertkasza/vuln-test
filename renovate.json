@@ -2,7 +2,12 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
   "enabledManagers": ["npm"],
-  "packageRules": [{ "matchPackagePatterns": ["*"], "enabled": false }],
+  "packageRules": [{
+      "enabled": false,
+      "matchPackageNames": [
+        "*"
+      ]
+    }],
   "vulnerabilityAlerts": {
     "enabled": true,
     "labels": ["security"],
@@ -13,7 +18,6 @@
     "prHeader": "This PR remediates open vulnerability advisories detected by `pnpm audit`. CI cannot pass while any advisory remains, so all fixes are bundled here. Each entry below links to the GHSA advisory with details on impact and the chosen fix."
   },
   "osvVulnerabilityAlerts": true,
-  "transitiveRemediation": true,
   "prConcurrentLimit": 0,
   "prHourlyLimit": 0
 }
