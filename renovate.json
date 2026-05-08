@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "enabledManagers": ["npm"],
+  "packageRules": [{ "matchPackagePatterns": ["*"], "enabled": false }],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "labels": ["security"],
+    "vulnerabilityFixStrategy": "lowest"
+  },
+  "osvVulnerabilityAlerts": true,
+  "transitiveRemediation": true,
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0
+}
