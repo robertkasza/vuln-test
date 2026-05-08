@@ -6,7 +6,11 @@
   "vulnerabilityAlerts": {
     "enabled": true,
     "labels": ["security"],
-    "vulnerabilityFixStrategy": "lowest"
+    "vulnerabilityFixStrategy": "lowest",
+    "groupName": "security updates",
+    "groupSlug": "security",
+    "prTitle": "fix(deps): {{#if (equals upgrades.length 1)}}update {{upgrades.0.depName}} to address {{lowercase upgrades.0.vulnerabilitySeverity}} security advisory{{else}}{{#if (or (equals upgrades.length 2) (equals upgrades.length 3))}}update {{#each upgrades}}{{depName}}{{#unless @last}}, {{/unless}}{{/each}} to address security audit{{else}}update {{upgrades.length}} dependencies to address security audit{{/if}}{{/if}}",
+    "prHeader": "This PR remediates open vulnerability advisories detected by `pnpm audit`. CI cannot pass while any advisory remains, so all fixes are bundled here. Each entry below links to the GHSA advisory with details on impact and the chosen fix."
   },
   "osvVulnerabilityAlerts": true,
   "transitiveRemediation": true,
