@@ -122,8 +122,8 @@ importers:
   packages/utils:
     dependencies:
       lodash:
-        specifier: 4.17.20
-        version: 4.17.20
+        specifier: 4.18.1
+        version: 4.18.1
     devDependencies:
       '@types/lodash':
         specifier: ^4.17.13
@@ -796,8 +796,8 @@ packages:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
     engines: {node: '>=10'}
 
-  lodash@4.17.20:
-    resolution: {integrity: sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==}
+  lodash@4.18.1:
+    resolution: {integrity: sha512-dMInicTPVE8d1e5otfwmmjlxkZoUpiVLwyeTdUsi/Caj/gfzzblBcCE5sRHV/AsjuCmxWrte2TNGSYuCeCq+0Q==}
 
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
@@ -1641,7 +1641,7 @@ snapshots:
     dependencies:
       p-locate: 5.0.0
 
-  lodash@4.17.20: {}
+  lodash@4.18.1: {}
 
   lru-cache@5.1.1:
     dependencies:

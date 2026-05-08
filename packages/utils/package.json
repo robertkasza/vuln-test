@@ -9,7 +9,7 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
-    "lodash": "4.17.20"
+    "lodash": "4.18.1"
   },
   "devDependencies": {
     "@types/lodash": "^4.17.13",
