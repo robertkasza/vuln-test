@@ -7,10 +7,53 @@ settings:
 importers:
 
   .:
+    devDependencies:
+      typescript:
+        specifier: ~6.0.2
+        version: 6.0.3
+
+  apps/admin:
     dependencies:
-      lodash:
-        specifier: 4.17.20
-        version: 4.17.20
+      '@vuln-test/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      '@vuln-test/utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
+      react:
+        specifier: ^19.2.5
+        version: 19.2.6
+      react-dom:
+        specifier: ^19.2.5
+        version: 19.2.6(react@19.2.6)
+    devDependencies:
+      '@types/react':
+        specifier: ^19.2.14
+        version: 19.2.14
+      '@types/react-dom':
+        specifier: ^19.2.3
+        version: 19.2.3(@types/react@19.2.14)
+      '@vitejs/plugin-react':
+        specifier: ^6.0.1
+        version: 6.0.1(vite@8.0.11(@types/node@24.12.3))
+      '@vuln-test/config':
+        specifier: workspace:*
+        version: link:../../packages/config
+      typescript:
+        specifier: ~6.0.2
+        version: 6.0.3
+      vite:
+        specifier: ^8.0.10
+        version: 8.0.11(@types/node@24.12.3)
+
+  apps/web:
+    dependencies:
+      '@vuln-test/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      '@vuln-test/utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
       react:
         specifier: ^19.2.5
         version: 19.2.6
@@ -33,6 +76,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^6.0.1
         version: 6.0.1(vite@8.0.11(@types/node@24.12.3))
+      '@vuln-test/config':
+        specifier: workspace:*
+        version: link:../../packages/config
       eslint:
         specifier: ^10.2.1
         version: 10.3.0
@@ -54,6 +100,40 @@ importers:
       vite:
         specifier: ^8.0.10
         version: 8.0.11(@types/node@24.12.3)
+
+  packages/config: {}
+
+  packages/ui:
+    dependencies:
+      react:
+        specifier: ^19.0.0
+        version: 19.2.6
+    devDependencies:
+      '@types/react':
+        specifier: ^19.2.14
+        version: 19.2.14
+      '@vuln-test/config':
+        specifier: workspace:*
+        version: link:../config
+      typescript:
+        specifier: ~6.0.2
+        version: 6.0.3
+
+  packages/utils:
+    dependencies:
+      lodash:
+        specifier: 4.17.20
+        version: 4.17.20
+    devDependencies:
+      '@types/lodash':
+        specifier: ^4.17.13
+        version: 4.17.24
+      '@vuln-test/config':
+        specifier: workspace:*
+        version: link:../config
+      typescript:
+        specifier: ~6.0.2
+        version: 6.0.3
 
 packages:
 
@@ -323,6 +403,9 @@ packages:
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
+
+  '@types/lodash@4.17.24':
+    resolution: {integrity: sha512-gIW7lQLZbue7lRSWEFql49QJJWThrTFFeIMJdp3eH4tKoxm1OvEPg02rm4wCCSHS0cL3/Fizimb35b7k8atwsQ==}
 
   '@types/node@24.12.3':
     resolution: {integrity: sha512-8oljBDGun9cIsZRJR6fkihn0TSXJI0UDOOhncYaERq6M0JMDoPLxyscwruJcb4GKS6dvK/d8xebYBg27h/duaQ==}
@@ -1182,6 +1265,8 @@ snapshots:
   '@types/estree@1.0.9': {}
 
   '@types/json-schema@7.0.15': {}
+
+  '@types/lodash@4.17.24': {}
 
   '@types/node@24.12.3':
     dependencies:

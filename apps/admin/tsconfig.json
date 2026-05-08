@@ -1,0 +1,4 @@
+{
+  "extends": "@vuln-test/config/tsconfig.react.json",
+  "include": ["src"]
+}

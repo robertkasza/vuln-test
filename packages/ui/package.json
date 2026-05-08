@@ -1,0 +1,19 @@
+{
+  "name": "@vuln-test/ui",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./src/index.tsx",
+  "types": "./src/index.tsx",
+  "exports": {
+    ".": "./src/index.tsx"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@vuln-test/config": "workspace:*",
+    "typescript": "~6.0.2"
+  }
+}
